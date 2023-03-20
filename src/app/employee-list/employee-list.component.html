@@ -1,0 +1,23 @@
+<h2 style="color: rgb(246, 26, 26);">Employee list</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email Id</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let employee of employees">
+    <td style="color: rgb(255, 255, 255); background-color: black;">{{employee.firstname}}</td>   
+    <td style="color: rgb(255, 255, 255); background-color: black;" >{{employee.lastname}}</td> 
+    <td style="color: rgb(255, 255, 255); background-color: black;">{{employee.emailId}}</td> 
+    <td>
+        <button (click)="updateEmployee(employee.id)" class="btn btn-info" style="color: rgb(32, 255, 69); background-color: black; padding: 7px 30px;">Update</button>
+        <button (click)="deletEmployee(employee.id)" style="color: rgb(255, 0, 0); background-color: black; padding: 5px 32px; border-radius: 10px;">Delete</button>
+        <button (click)="employeedetails(employee.id)" style="color: rgb(0, 162, 255); background-color: black; padding: 5px 32px; border-radius: 10px;">View</button>
+    </td>
+    </tr>
+</tbody>
+</table>
